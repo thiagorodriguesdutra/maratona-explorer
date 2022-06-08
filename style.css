@@ -23,10 +23,15 @@ body {
     overflow: hidden;
 }
 
+h1 {
+    opacity: 0.9;
+}
+
 p {
     margin: 0;
     padding: 0;
-    font-size: 1.4rem
+    font-size: 1.4rem;
+    opacity: 0.7;
 }
 
 main {
@@ -41,32 +46,37 @@ main img {
     height: 8rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, button {
+input, button {
     width: 100%;
     height: 5rem;
     border-radius: 0.4rem;
+    display: block;
 }
 
-form input {
+input {
    margin-top: 2rem;
    font-size: 1.6rem;
-   padding: 1rem;
+   padding: 2rem;
 }
 
-form button {
+button {
     margin-top: 1rem;
     font-size: 1.6rem;
     background-color: var(--primary-btn-color);
     color: currentColor;
     border: none;
+    transition: 0.2s;
 }
 
-form button:hover {
+.hide {
+    display: none;
+}
+
+#interaction {
+    transition: 0.5s;
+}
+
+button:hover {
     background-color: var(--primary-btn-hover);
 }
 
