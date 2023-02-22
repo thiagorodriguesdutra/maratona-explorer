@@ -11,6 +11,24 @@
     --primary-btn-hover: #9466ff;
 }
 
+@keyframes input-validity {
+    0% {
+        transform: translateY(2px)
+    }
+    25% {
+        transform: translateY(-2px)
+    }
+    50% {
+        transform: translateY(2px)
+    }
+    75% {
+        transform: translateY(-2px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -21,6 +39,9 @@ body {
     background-color: #000000;
     color: #FFFF;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -34,14 +55,14 @@ p {
     opacity: 0.7;
 }
 
-main {
+form {
+    margin-top: 4rem;
     width: 34rem;
     height: auto;
-    margin: 5rem auto;
     text-align: center;
 }
 
-main img {
+form img {
     width: 8rem;
     height: 8rem;
 }
@@ -57,6 +78,11 @@ input {
    margin-top: 2rem;
    font-size: 1.6rem;
    padding: 2rem;
+   border: none
+}
+
+input.required {
+    animation: input-validity 0.5s linear;
 }
 
 button {
