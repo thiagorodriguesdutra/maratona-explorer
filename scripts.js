@@ -20,7 +20,7 @@ function askAQuestion() {
 
   if(inputElement.value === "") {
     inputElement.classList.add("required");
-    inputElement.setCustomValidity('Ops, você esqueceu de fazer a pergunta!')
+    inputElement.setCustomValidity(' ');
     return
   };
 
